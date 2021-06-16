@@ -60,7 +60,7 @@ async function widgetCreate() {
     }, 10)
 
 
-    fetch('http://localhost:3000/getLevels', {
+    fetch('https://amazeing-pl.herokuapp.com/getLevels', {
         method: "GET",
     })
         .then(res => res.json()).then(res => {
@@ -97,7 +97,7 @@ async function widgetCreate() {
                 if (level.name === "" || level.name === undefined || level.name === null) { level.name = "amogus" }
                 if (level.author === "" || level.author === undefined || level.author === null) { level.author = "sus" }
                 widgetBody.innerText = "Wysyłanie Poziomu..."
-                fetch('http://localhost:3000/saveLevel', {
+                fetch('https://amazeing-pl.herokuapp.com/saveLevel', {
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json',

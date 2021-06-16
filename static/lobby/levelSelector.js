@@ -1,10 +1,10 @@
 levelSelect = document.getElementById("levels")
 
 
-const socket = new WebSocket('ws://localhost:3000');
+const socket = new WebSocket('wss://amazeing-pl.herokuapp.com');
 socket.addEventListener('open', function (event) {
     console.log('Connected to WS Server');
-    fetch('http://localhost:3000/getLevels', {
+    fetch('https://amazeing-pl.herokuapp.com/getLevels', {
         method: "GET",
     })
         .then(res => res.json()).then(res => {
@@ -47,7 +47,7 @@ socket.addEventListener('open', function (event) {
 
                 mazeOption.addEventListener("click", function () {
                     const http = new XMLHttpRequest();
-                    var url = 'http://localhost:3000/selectLevel';
+                    var url = 'https://amazeing-pl.herokuapp.com/selectLevel';
                     let theme = document.getElementById("theme-select").value
                     if(document.getElementById("aether").checked){
                         theme = "aether"
@@ -70,7 +70,7 @@ socket.addEventListener('open', function (event) {
 
     socket.addEventListener('message', function (event) {
         if (event.data === "Ładuj Poziom") {
-            document.location.href = 'http://localhost:3000/game'
+            document.location.href = 'https://amazeing-pl.herokuapp.com/game'
         }
         console.log('Message from server ', event.data);
     })
