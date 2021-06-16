@@ -1,0 +1,136 @@
+
+/* #side-menu:not(.retracted) #resize-menu{
+    top: 0;
+    background-image: url("arrow.png");
+}
+#side-menu:not(.retracted) #home{
+    top: 5vw;
+    background-image: url("house.png");
+}
+#side-menu:not(.retracted) #player-lobby{
+    top: 10vw;
+    background-image: url("human.png");
+}
+#side-menu:not(.retracted) #level-creator{
+    top: 15vw;
+    background-image: url("pencil.png");
+} */
+
+
+
+#grid-container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50vw;
+    background-image: url(sddefault.jpg);
+    background-size: contain;
+}
+
+.grid {
+    position: absolute;
+    border: 1px solid black;
+    background-color: black;
+    transition: opacity 1s;
+    box-sizing: border-box;
+}
+.grid.untagged:hover{
+    opacity: 0;
+    transition: 0s;
+}
+
+
+#buttons-container{
+    position: absolute;
+    left: 50vw;
+    top: 0;
+    width: 16vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#buttons-container *{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+
+}
+
+#json-area{
+    border: none;
+    padding: 0;
+    position: fixed;
+    left: 70vw;
+    top: 0;
+    width: 30vw;
+    height: 100%;
+}
+
+
+#widget-cover{
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: black;
+}
+#widget-body{
+    border-radius: 25px;
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    left: 50%;
+    transition: height 0.5s, top 0.5s, width 0.5s, left 0.5s;
+    background-color: rgb(209, 209, 209);
+    width:  0%;
+    height: 0%;
+    text-align: center;
+}
+#nick-input, #name-input, #level-select{
+    border: none;
+    /* border-radius: 20%; */
+    height: 10%;
+    font-size: 2vh;
+    /* margin-left: 10%; */
+    text-align: center;
+}
+#nick-input{
+    margin-top: 5vh;
+    padding: 0 10% 0 10%;
+    width: 80%;
+}
+#name-input{
+    margin-top: 5vh;
+    padding: 0 10% 0 10%;
+    width: 80%;
+}
+#level-select{
+    padding-left: 1vw;
+    margin-top: 5vh;
+    width: 100%;
+}
+#send-level{
+    height: 10%;
+    background-color: white;
+    margin-top: 5vh;
+    width: 100%;
+    font-size: 2vh;
+    border: none;
+    line-height: 200%;
+}
+#widget-body *:hover{
+    cursor: pointer;
+    box-shadow: 0 10px black;
+}
+
+#widget-body *{
+    outline: none;
+    transition: box-shadow 0.5s;
+}
+
+#name-input:focus, #nick-input:focus{
+    box-shadow: 0 10px black;
+}
