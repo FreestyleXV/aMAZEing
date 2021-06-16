@@ -2,11 +2,11 @@ let playerButton = document.getElementById("player");
 let spectatorButton = document.getElementById("spectator");
 let playerId;
 
-const socket = new WebSocket('wss://amazeing-pl.herokuapp.com');
+const socket = new WebSocket('ws://localhost:3000');
 socket.addEventListener('open', function (event) {
     console.log('Connected to WS Server');
 
-    fetch('https://amazeing-pl.herokuapp.com/joinLobby', {
+    fetch('http://localhost:3000/joinLobby', {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -50,6 +50,15 @@ socket.addEventListener('open', function (event) {
                         secondButton.style.background = "black";
                 }
                 if (data.role !== "" && data.otherRole !== "") {
+                    // fetch('http://localhost:3000/levelSelector', {
+                    //     method: "POST",
+                    //     headers: {
+                    //         'Content-Type': 'application/json',
+                    //     },
+                    //     body: JSON.stringify({ playerId: playerId })
+                    // })
+                    //     .then(res => console.log(res))
+                    //     .catch(err => { console.log(err) })
                     let form = document.createElement("form")
                     form.method = "POST"
                     form.action = "/levelSelector"

@@ -1,4 +1,4 @@
-window.setTimeout(()=>{fetch('https://amazeing-pl.herokuapp.com/endPrintData', {
+window.setTimeout(()=>{fetch('http://localhost:3000/endPrintData', {
         method: "GET",
     })
         .then(res => res.json()).then(res => {

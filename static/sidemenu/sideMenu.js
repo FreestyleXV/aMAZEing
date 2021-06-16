@@ -27,11 +27,11 @@ resizeButton.addEventListener("click", function(){
 })
 
 homeButton.addEventListener("click", function(){
-    document.location.href='https://amazeing-pl.herokuapp.com/'
+    document.location.href='http://localhost:3000/'
 })
 playerLobbyButton.addEventListener("click", function(){
-    document.location.href='https://amazeing-pl.herokuapp.com/lobby'
+    document.location.href='http://localhost:3000/lobby'
 })
 levelCreatorButton.addEventListener("click", function(){
-    document.location.href='https://amazeing-pl.herokuapp.com/creator'
+    document.location.href='http://localhost:3000/creator'
 })
