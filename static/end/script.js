@@ -1,4 +1,4 @@
-fetch('https://amazeing-pl.herokuapp.com/endPrintData', {
+window.setTimeout(()=>{fetch('https://amazeing-pl.herokuapp.com/endPrintData', {
         method: "GET",
     })
         .then(res => res.json()).then(res => {
@@ -16,4 +16,4 @@ fetch('https://amazeing-pl.herokuapp.com/endPrintData', {
                 }
             }
         })
-        .catch(err => { console.log(err) })
+        .catch(err => { console.log(err) })}, 100)

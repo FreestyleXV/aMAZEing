@@ -69,3 +69,11 @@ socket.addEventListener('open', function (event) {
         socket.send(JSON.stringify({ action: "change role", data: "spectator", playerId: playerId }))
     });
 });
+
+
+
+
+
+// const sendMessage = () => {
+//     socket.send('Hello form Client!');
+// }
