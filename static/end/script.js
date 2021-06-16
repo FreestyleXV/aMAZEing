@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/endPrintData', {
+fetch('https://amazeing-pl.herokuapp.com/endPrintData', {
         method: "GET",
     })
         .then(res => res.json()).then(res => {
